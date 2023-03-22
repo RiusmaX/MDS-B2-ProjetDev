@@ -1,9 +1,9 @@
 import '../styles/FooterStyle.css'
 
-function Footer() {
-  return ( 
-    <footer className="footer">
-      <div className="col">
+function Footer () {
+  return (
+    <footer className='footer'>
+      <div className='col'>
         <ul>
           <li>toto</li>
           <li>toto</li>
@@ -12,7 +12,7 @@ function Footer() {
           <li>toto</li>
         </ul>
       </div>
-      <div className="col">
+      <div className='col'>
         <ul>
           <li>toto</li>
           <li>toto</li>
@@ -21,7 +21,7 @@ function Footer() {
           <li>toto</li>
         </ul>
       </div>
-      <div className="col">
+      <div className='col'>
         <ul>
           <li>toto</li>
           <li>toto</li>
@@ -31,7 +31,7 @@ function Footer() {
         </ul>
       </div>
     </footer>
-   );
+  )
 }
 
-export default Footer;
+export default Footer

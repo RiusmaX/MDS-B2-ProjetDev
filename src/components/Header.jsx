@@ -1,34 +1,34 @@
 import '../styles/HeaderStyle.css'
 
-function Header() {
-  return ( 
-    <header className="header">
-      <div className="header-logo">
+function Header () {
+  return (
+    <header className='header'>
+      <div className='header-logo'>
         <img src='/assets/img/logo.png' height={50} />
       </div>
-      <div className="header-menu">
+      <div className='header-menu'>
         <nav>
           <span>
-            <a href="#toto">Menu 1</a>
+            <a href='/'>Accueil</a>
           </span>
           <span>
-            <a href="#toto">Menu 2</a>
+            <a href='/restaurants'>Restaurants</a>
           </span>
           <span>
-            <a href="#toto">Menu 3</a>
+            <a href='/about'>A propos</a>
           </span>
         </nav>
       </div>
-      <div className="header-socials">
-        <a href="#toto">
+      <div className='header-socials'>
+        <a href='#toto'>
           📷
         </a>
-        <a href="#toto">
+        <a href='#toto'>
           📷
         </a>
       </div>
     </header>
-   );
+  )
 }
 
-export default Header;
+export default Header
