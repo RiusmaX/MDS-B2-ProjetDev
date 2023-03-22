@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+}
+.header-menu nav span {
+  margin: 15px;
+}
+
+.header-menu nav a:hover {
+  color: var(--secondary-color);
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
+}
