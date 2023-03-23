@@ -35,7 +35,7 @@ function Restaurants () {
             // On retourne pour chaque restaurant une Card pour afficher son contenu
             restaurants && restaurants.map(restaurant => {
               return (
-                <Card key={restaurant.id} restaurant={restaurant} />
+                <Card mode='restaurant' key={restaurant.id} item={restaurant} />
               )
             })
           }
