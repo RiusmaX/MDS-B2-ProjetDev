@@ -15,3 +15,17 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
