@@ -1,5 +1,4 @@
 function RestaurantAddress ({ address }) {
-  console.log(address)
   return (
     <div className='address'>
       <h2>Localisation</h2>
