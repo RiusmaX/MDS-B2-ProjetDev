@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 import About from './pages/About'
 import Restaurants from './pages/Restaurants'
 import Restaurant from './pages/Restaurant'
+import Cart from './pages/Cart'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/cart',
+        element: <Cart />
       },
       {
         path: '/restaurants',

@@ -23,6 +23,7 @@
 
 .header-cart {
   position: relative;
+  cursor: pointer;
 }
 
 .header-cart span {

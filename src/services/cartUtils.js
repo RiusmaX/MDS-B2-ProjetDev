@@ -31,6 +31,18 @@ const addToCart = (item) => {
   window.dispatchEvent(new Event('storage'))
 }
 
+const deleteFromCart = (index) => {
+  // Etape 1 : Je récupère mon panier sauvegardé
+  const savedCart = window.localStorage.getItem('CART')
+  if (savedCart) {
+    const cart = JSON.parse(savedCart)
+    cart.splice(index, 1)
+    window.localStorage.setItem('CART', JSON.stringify(cart))
+    window.dispatchEvent(new Event('storage'))
+  }
+}
+
 export {
-  addToCart
+  addToCart,
+  deleteFromCart
 }

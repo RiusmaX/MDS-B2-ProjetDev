@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom'
 import '../styles/HeaderStyle.css'
 
 function Header () {
   const [cart, setCart] = useState()
 
-  // TODO TERMINER ça demain
+  const navigate = useNavigate()
 
   useEffect(() => {
     const savedCart = window.localStorage.getItem('CART')
@@ -22,6 +23,10 @@ function Header () {
       }
     })
   }, [])
+
+  const handleCart = () => {
+    navigate('/cart')
+  }
 
   return (
     <header className='header'>
@@ -41,7 +46,7 @@ function Header () {
           </span>
         </nav>
       </div>
-      <div className='header-cart'>
+      <div className='header-cart' onClick={handleCart}>
         <AiOutlineShoppingCart size={30} color='white' />
         <span>{cart && cart.length}</span>
       </div>
