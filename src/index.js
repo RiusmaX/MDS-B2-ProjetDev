@@ -9,6 +9,12 @@ import About from './pages/About'
 import Restaurants from './pages/Restaurants'
 import Restaurant from './pages/Restaurant'
 import Cart from './pages/Cart'
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
+import Success from './pages/Success'
+import Cancel from './pages/Cancel'
+
+const stripePromise = loadStripe('pk_test_51McD8vHoDJ3E1I0xEcFEfemASQuck5jNMX2w4fs1isBsVUCtebarYhSM4bCTjMzuoy1bX5nSdsLCvGK495qlmOxC00nEWh7OkF')
 
 const router = createBrowserRouter([
   {
@@ -25,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <Cart />
+      },
+      {
+        path: '/success',
+        element: <Success />
+      },
+      {
+        path: '/cancel',
+        element: <Cancel />
       },
       {
         path: '/restaurants',
@@ -46,7 +60,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Elements stripe={stripePromise}>
+      <RouterProvider router={router} />
+    </Elements>
   </React.StrictMode>
 )
 
