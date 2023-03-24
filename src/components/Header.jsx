@@ -8,6 +8,11 @@ function Header () {
   // TODO TERMINER ça demain
 
   useEffect(() => {
+    const savedCart = window.localStorage.getItem('CART')
+    if (savedCart) {
+      const _cart = JSON.parse(savedCart)
+      setCart(_cart)
+    }
     window.addEventListener('storage', (e) => {
       console.log('UN changement a eu lieu dans le localstorage')
       const savedCart = window.localStorage.getItem('CART')
@@ -36,9 +41,9 @@ function Header () {
           </span>
         </nav>
       </div>
-      <div className='header-socials'>
+      <div className='header-cart'>
         <AiOutlineShoppingCart size={30} color='white' />
-        <strong>{cart && cart.length}</strong>
+        <span>{cart && cart.length}</span>
       </div>
     </header>
   )

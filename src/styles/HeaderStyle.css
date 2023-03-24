@@ -20,3 +20,21 @@
   font-weight: bold;
   transition: all 200ms ease-in-out;
 }
+
+.header-cart {
+  position: relative;
+}
+
+.header-cart span {
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+}
