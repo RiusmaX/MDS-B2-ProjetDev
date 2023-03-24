@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { addToCart } from '../services/cartUtils'
 import '../styles/CardStyle.css'
 
 const IMAGE_URL = 'http://localhost:1337'
@@ -17,6 +18,8 @@ function Card ({ item, mode }) {
   const handleClick = () => {
     if (mode === 'restaurant') {
       navigate('/restaurants/' + item.id)
+    } else {
+      addToCart(item)
     }
   }
 
